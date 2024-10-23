@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Homepage{% endblock %}</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    {% block style %}
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0;
+        }
+    </style>
+    {% endblock %}
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary fixed-top shadow p-3 mb-5 bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">LADGAC Rehabilitation Centre</a>
+            <button class="navbar-toggler border border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/join">
+
+                                <ion-icon name="person-add" style="font-size: 25px;"></ion-icon>
+                                Join Rehab</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/donate">
+                                <ion-icon name="gift" style="font-size: 25px;"></ion-icon>
+                                Donate To LADGAC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/about">
+                                <ion-icon name="information-circle" style="font-size: 25px;"></ion-icon>
+                                About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/signin">
+
+                                <ion-icon name="contact" style="font-size: 25px;"></ion-icon>
+                                Admin Page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav><br><br><br>
+
+    {% block content %}{% endblock %}
+
+    <div class="container">
+        <footer class="py-5 border-top border-danger border-2">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-4">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="/imgs/logo.jpg" class="img-fluid">
+                        </div>
+                        <div class="col-8">
+                            <h5 aria-label="Bootstrap">
+                                LADGAC Rehabilitation Centre
+                            </h5>
+                        </div>
+                        <div class="col mt-3">
+                            <p>Parents we can help each other to give second chance in life for our beloved ones and get
+                                out of shame</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3">
+                    <h5>Contact Us</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                87178 27 Zone F Seshego 0742</a></li>
+                        <li class="nav-item mb-2"><a href="mailto:spacemilkza@gmail.com"
+                                class="nav-link p-0 text-body-secondary">LADGACRehab@gmail.com</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://wa.me/27722914227" target="_blank"
+                                class="nav-link p-0 text-body-secondary">&plus;27 72 291 4227
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline py-3">
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis" target="_blank" href="https://wa.me/27722914227">
+                                <ion-icon name="logo-whatsapp" style="font-size: 25px"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis" target="_blank" href="#">
+                                <ion-icon name="logo-facebook" style="font-size: 25px"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis" target="_blank" href="#">
+                                <ion-icon name="logo-instagram" style="font-size: 25px"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis" target="_blank" href="#">
+                                <ion-icon name="logo-tiktok" style="font-size: 25px"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3">
+                    <h5>Navigation</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="/join" class="nav-link p-0 text-body-secondary">
+                                Join LADGAC Rehab
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="/donate" class="nav-link p-0 text-body-secondary">Donate to LADGAC Rehab</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="/about" class="nav-link p-0 text-body-secondary">About LADGAC Rehab</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3">
+                    <h5>Working Hours</h5>
+                    <table class="table table-borderless flex-column">
+                        <tr>
+                            <td>Mon - Fri</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sat</td>
+                            <td>09:00 - 15:00</td>
+                        </tr>
+                        <tr>
+                            <td>Public Holidays</td>
+                            <td>09:00 - 12:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sun</td>
+                            <td>Closed</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="justify-content-between col">
+                    <p>&copy;2024 <b>LADGAC Rehabilitation Centre</b></p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis" href="#">
+                                Terms of Use
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis" href="#">
+                                Commercial Terms
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis" href="#">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        LADGAC Rehabilitation Centre (2024/4638/07) is registered in South Africa.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="/imgs/dosd.png" class="w-25 " />
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
